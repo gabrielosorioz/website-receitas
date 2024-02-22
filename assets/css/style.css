@@ -346,7 +346,7 @@ main {flex-grow: 1;}
   transition: var(--transition-short);
 }
 
-has-state:where(:hover, :focus-visible):not(:active)::after {
+.has-state:where(:hover, :focus-visible):not(:active)::after {
   background-color: var(--alpha-10);
 }
 
