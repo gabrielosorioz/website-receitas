@@ -1,4 +1,4 @@
-/*-----------------------------------*\
+/* -----------------------------------*\
   #style.css
 \*-----------------------------------*/
 
@@ -100,6 +100,7 @@
   
   --shadow-1: 0 -1px 8px hsla(0, 0%, 0%, 0.2);
   --shadow-2: 0 2px 4px 1px hsla(0, 0%, 0%, 0.3);
+  --shadow-3:rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 
   /**
   * OTHERS
@@ -117,8 +118,8 @@
     */
 
     --transition-timing-function: cubic-bezier(0.2, 0, 0, 1);
---transition-short: 200ms var(--transition-timing-function);
---transition-medium: 500ms var(--transition-timing-function);
+    --transition-short: 200ms var(--transition-timing-function);
+    --transition-medium: 500ms var(--transition-timing-function);
   }
 }
 
@@ -654,9 +655,7 @@ main {flex-grow: 1;}
  */
 
 
-/**
- * Skeleton
- */
+
 
 
 /**
@@ -758,6 +757,9 @@ main {flex-grow: 1;}
   transition: var(--transition-short);
 }
 
+.search-submit:where(:hover, :focus-visible):not(:active) {
+  background-color: var(--primary-hover);
+}
 
 
 
@@ -765,8 +767,22 @@ main {flex-grow: 1;}
   #TAB
 \*-----------------------------------*/
 
+.tab .tab-list {
+  background-color: var(--background);
+  position: sticky;
+  top: var(--header-height);
+  margin-inline: -16px;
+  padding-inline: 16px;
+  margin-block: 16px 12px;
+  z-index: 1;
+}
 
+.tab-panel[hidden] {  display: none; }
 
+.tab .btn-secondary {
+  max-width: 100%;
+  margin-block-start: 12px;
+}
 
 
 /*-----------------------------------*\
@@ -829,4 +845,4 @@ main {flex-grow: 1;}
 
 /*-----------------------------------*\
   #MEDIA QUERIES
-\*-----------------------------------*/
+\*----------------------------------- */
