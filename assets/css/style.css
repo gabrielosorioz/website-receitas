@@ -393,6 +393,8 @@ main {flex-grow: 1;}
   object-fit: cover;
 }
 
+.section-title  { margin-block-end: 12px;}
+
 /**
  * Skeleton
  */
@@ -637,6 +639,16 @@ main {flex-grow: 1;}
 
 /* badge button */
 
+.badge-btn {
+  align-items: center;
+  height: 40px;
+  border-radius: var(--radius-pill);
+  background-color: var(--badge-btn);
+  color: var(--on-badge-btn);
+  max-width: max-content;
+  padding-inline: 16px;
+  display: grid;
+}
 /* filter button */
 
 
@@ -789,6 +801,47 @@ main {flex-grow: 1;}
   #RECIPE SLIDER
 \*-----------------------------------*/
 
+.slider {
+  --gap: 8px;
+  position: relative;
+  overflow-x: auto;
+  scroll-snap-type: inline mandatory;
+  padding-block-end: 5px;
+}
+
+.slider::-webkit-scrollbar {  height: 4px; }
+
+.slider::-webkit-scrollbar-thumb { background-color: transparent;}
+
+.slider:where(:hover, :focus-within)::-webkit-scrollbar-thumb {
+  background-color: var(--alpha-10);
+}
+.slider-wrapper {
+  display: flex;
+  align-items: stretch;
+  gap: var(--gap);
+  transition: var(--transition-medium);
+}
+
+.slider-item {
+  min-width: calc(50% - 4px);
+  scroll-snap-align: start;
+
+}
+
+.load-more-card {
+  height: 100%;
+  background-color: var(--primary-container);
+  border-radius: var(--radius-4);
+  border: 1px solid var(--outline);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+
+
 
 
 
@@ -797,7 +850,23 @@ main {flex-grow: 1;}
   #TAG
 \*-----------------------------------*/
 
+.tag {  text-align: center; }
 
+.tag .section-text {
+  max-width: 50ch;
+  margin-inline: auto;
+
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-block-start: 24px;
+
+}
 
 
 
@@ -805,7 +874,22 @@ main {flex-grow: 1;}
   #FOOTER
 \*-----------------------------------*/
 
+.footer .logo { display:  none;}
 
+.footer{
+  padding: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  column-gap: 12px;
+  border-block-start: 1px solid var(--outline) ;
+  
+}
+
+.copyright {  opacity: 0.8; }
+
+.footer .edamm img {  -webkit-border-before-width: 180px;}
 
 
 
