@@ -749,6 +749,7 @@ main {flex-grow: 1;}
 }
 
 .search-field {
+  color: var(--on-background-variant);
   height: 56px;
   background-color: var(--primary-container);
   padding-inline: 56px;
