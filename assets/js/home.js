@@ -37,6 +37,15 @@ $searchField.addEventListener("keydown", e => {
  * Tab panel navigation
  */
 
+/** 
+ * On page load, 
+ * select the panel that you show
+*/
+document.addEventListener("DOMContentLoaded", function() {
+    let $firstBtnPanel = document.getElementById("tab-1");
+    $firstBtnPanel.click();
+});
+
 const /** {NodeList} */ $tabBtns = document.querySelectorAll("[data-tab-btn]");
     
 const /** {NodeList} */ $tabPanels = document.querySelectorAll("[data-tab-panel]");
