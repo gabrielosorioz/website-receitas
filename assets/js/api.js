@@ -28,5 +28,7 @@ export const fetchData = async function (queries, successCallback) {
     if(response.ok){
         const data = await response.json();
         successCallback(data);
+    } else {
+        throw new Error(`Fetch error! Status: ${response.status}`);
     }
 }
