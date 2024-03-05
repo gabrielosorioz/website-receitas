@@ -46,7 +46,6 @@ window.saveRecipe = function (element, recipeId) {
     const /** {String} */ isSaved = window.localStorage.getItem(`cookio-recipe${recipeId}`);
 
     ACCESS_POINT = `${ROOT}/${recipeId}`; 
-    console.log(recipeId)
 
     if(!isSaved) {
         fetchData(cardQueries, function (data) {
@@ -60,7 +59,6 @@ window.saveRecipe = function (element, recipeId) {
 
     ACCESS_POINT = ROOT;
     } else {
-        console.log("entrou na função");
         window.localStorage.removeItem(`cookio-recipe${recipeId}`);
         element.classList.toggle("saved");
         element.classList.toggle("removed");
