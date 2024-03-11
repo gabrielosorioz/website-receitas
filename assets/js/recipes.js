@@ -115,3 +115,11 @@ queryStr && queryStr.split("&").map(i => {
     }
 });
 
+const /** {NodeElement} */ $filterBtn = document.querySelector("[data-filter-btn]");
+
+window.addEventListener("scroll", e => {
+    $filterBtn.classList[window.scrollY >= 120 ? "add" : "remove"]("active");
+});
+
+
+
